@@ -1,6 +1,6 @@
 ---
 name: dam-coc
-description: damostack hurdle-rate builder following Damodaran's approach - currency-consistent riskfree rate (net of sovereign default spread), current implied equity risk premium, operations-weighted country risk premium, bottom-up beta, synthetic-rating cost of debt, market-value weights - with plausibility checks against his cost-of-capital distributions. Use for "what discount rate", "WACC for X", "hurdle rate for this project", "cost of equity", "country risk premium for India/Brazil", "beta for my industry".
+description: damostack discount-rate builder: riskfree rate, implied ERP, country risk, bottom-up beta, synthetic rating, plausibility checks. Triggers: "WACC for X", "hurdle rate", "cost of equity", "country risk premium".
 ---
 
 # /dam-coc — the discount rate, without the agonizing
@@ -11,7 +11,8 @@ Get it reasonable and consistent, then spend your time on the cash flows
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md`, V3 in `frameworks.md`, and `market-data.md`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb frameworks V3` and `~/.claude/skills/damostack/bin/kb market-data`.
 Refresh the market inputs: `adsearch.py --recent 3` (latest ERP and riskfree) and `addata.py ctryprem <country>`.
 
 ## 1. Ask (briefly)

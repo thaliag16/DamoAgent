@@ -89,11 +89,12 @@ def main():
         body = [r for r in body if r and q in r[0].lower()] or \
                [r for r in body if any(q in c.lower() for c in r)]
     else:
-        body = body[:40]
+        print(f"(showing 15 of {len(body)} rows; pass a query, e.g. addata.py {name} soft, to filter)")
+        body = body[:15]
     if hdr:
         print(" | ".join(hdr))
         print("-" * min(160, len(" | ".join(hdr))))
-    for r in body[:60]:
+    for r in body[:25]:
         print(" | ".join(r))
     if not body:
         print("(no matching rows: try a shorter query, e.g. 'soft' for Software)")

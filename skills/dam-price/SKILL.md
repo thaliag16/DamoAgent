@@ -1,6 +1,6 @@
 ---
 name: dam-price
-description: damostack relative valuation (pricing) the Damodaran way - define, describe, analyze, apply - using his live industry multiples data (EV/Sales, EV/EBITDA, PE, P/BV) and the fundamentals that drive each multiple. Use for "is 20x revenue reasonable", "comparable companies", "what multiple should X trade at", "comps analysis", "is X cheap relative to peers".
+description: damostack relative valuation (define, describe, analyze, apply) with his live industry multiples. Triggers: "is 20x revenue reasonable", "comps", "is X cheap vs peers".
 ---
 
 # /dam-price — pricing, done honestly
@@ -10,7 +10,7 @@ properly *(2020/03/a-viral-market-meltdown-iii-pricing-or)*.
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md` and V4 in `frameworks.md`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run `~/.claude/skills/damostack/bin/kb frameworks V4`.
 
 ## 1. Define
 

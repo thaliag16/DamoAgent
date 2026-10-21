@@ -1,6 +1,6 @@
 ---
 name: dam-startup
-description: damostack valuation and strategy for startups and private companies, from Damodaran's work on young companies, VC pricing, pre/post-money, failure risk, total beta, and the scaling-vs-profitability trade-off. Values the business intrinsically, contrasts it with the VC pricing, models dilution, and advises on whether and how to scale and raise. Use for "what's my startup worth", "is this term sheet's valuation fair", "pre-money", "should we scale or get profitable", "value a private company".
+description: damostack startup/private-company valuation: intrinsic value vs VC pricing, pre/post-money, dilution, scale vs profitability. Triggers: "what's my startup worth", "is this term sheet fair", "should we scale".
 ---
 
 # /dam-startup — what your company is worth, and what it's priced at
@@ -11,7 +11,8 @@ scaling over profitability *(2026/09/the-scaling-and-profitability-trade-off)*.
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md`, and V1, V2, V5, and V7 in `frameworks.md`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb frameworks V1 V2 V5 V7`.
 
 ## 1. Facts (ask together, as a short list)
 

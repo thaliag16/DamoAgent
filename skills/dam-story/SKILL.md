@@ -1,6 +1,6 @@
 ---
 name: dam-story
-description: damostack narrative builder and tester, from Damodaran's Narrative and Numbers. Helps founders and investors craft a business story that can be valued, runs the possible/plausible/probable (3P) test, builds a bottom-up market size instead of a hallucinated TAM, checks story-number consistency, and turns the story into valuation drivers. Use for "build my company's story", "is our TAM realistic", "pitch narrative for investors", "story check", "what's the story for X".
+description: damostack narrative builder: a valuable business story, the 3P test, a bottom-up TAM, and the story mapped to value drivers. Triggers: "build my company's story", "is our TAM realistic", "story check".
 ---
 
 # /dam-story — a story you can value
@@ -11,7 +11,8 @@ in front of skeptics.
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md` and V1, V7, and V9 in `frameworks.md`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb frameworks V1 V7 V9`.
 For depth, WebFetch `https://aswathdamodaran.blogspot.com/2014/07/possible-plausible-and-probable-big.html`.
 
 ## 1. Draft the story (ask one question at a time; skip what's known)

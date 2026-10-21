@@ -22,7 +22,7 @@ FEED = "https://aswathdamodaran.blogspot.com/feeds/posts/summary?alt=json"
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("terms", nargs="*")
-    p.add_argument("-n", type=int, default=10)
+    p.add_argument("-n", type=int, default=5)
     p.add_argument("--recent", type=int)
     a = p.parse_args()
     n = a.recent or a.n
@@ -36,7 +36,7 @@ def main():
         print("No posts found. Try fewer or different words.")
     for e in entries:
         link = next(x["href"] for x in e["link"] if x["rel"] == "alternate")
-        summ = re.sub(r"\s+", " ", html.unescape(e.get("summary", {}).get("$t", ""))).strip()[:220]
+        summ = re.sub(r"\s+", " ", html.unescape(e.get("summary", {}).get("$t", ""))).strip()[:140]
         print(f"{e['published']['$t'][:10]}  {e['title']['$t']}\n  {link}\n  {summ}…\n")
 
 

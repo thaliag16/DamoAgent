@@ -1,6 +1,6 @@
 ---
 name: dam-invest
-description: damostack investor lens from Damodaran's work on investment philosophies, market pricing (implied ERP), value vs price, market timing, and portfolio behavior. Helps an investor read the market, find an investment philosophy that fits, turn a valuation into a disciplined decision framework, and stress-test conviction. Not personalized financial advice. Use for "is the market overvalued", "how should I think about buying X", "what's my investment philosophy", "AI stocks - in or out", "should I buy the dip".
+description: damostack investor lens: implied ERP and market reading, value-to-decision framework, investment philosophy fit, the sleep test. Not personalized advice. Triggers: "is the market overvalued", "should I buy X", "my investment philosophy".
 ---
 
 # /dam-invest — from valuation to an investing decision
@@ -14,7 +14,8 @@ so say that when someone asks whether *they* should buy or sell, and leave the d
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md`, V8 and V9 in `frameworks.md`, and `market-data.md`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb frameworks V8 V9` and `~/.claude/skills/damostack/bin/kb market-data`.
 Refresh: `adsearch.py --recent 3`.
 
 ## Mode A — Reading the market

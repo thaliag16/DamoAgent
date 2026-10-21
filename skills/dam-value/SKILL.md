@@ -1,14 +1,14 @@
 ---
 name: dam-value
-description: Flagship damostack skill. A full Damodaran-style intrinsic valuation of a public or private company - story, 3P test, inputs from filings and his live datasets, FCFF DCF (Ginzu-style engine), sensitivity, Monte Carlo, value vs price, what the price implies, and what to watch - saved as a report. Use for "value X", "what is X worth", "is X overvalued/undervalued", "build a DCF for X", "Damodaran valuation of X".
+description: Flagship damostack skill: full story-to-numbers DCF of a public or private company, with sensitivity, Monte Carlo, value vs price, and what the price implies; saves a report. Triggers: "value X", "what is X worth", "DCF for X".
 ---
 
 # /dam-value — story → numbers → value → price → decision
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md`; V1, V2, V3, and V8 in
-`~/.claude/skills/damostack/knowledge/frameworks.md`; and `market-data.md` in the same folder.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb frameworks V1 V2 V3 V8` and `~/.claude/skills/damostack/bin/kb market-data`.
 
 ```bash
 python3 ~/.claude/skills/damostack/bin/adsearch.py "<company>" -n 5

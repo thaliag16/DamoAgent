@@ -1,6 +1,6 @@
 ---
 name: dam-review
-description: damostack critique of someone else's valuation - a DCF model, analyst or banker report, fairness opinion, M&A synergy case, IPO prospectus, or startup pitch deck - using Damodaran's "dark side of valuation" checklist (consistency errors, risk errors, story errors, bias). Use for "review this DCF", "check my model", "is this analyst target reasonable", "critique this pitch deck valuation", "is this acquisition price justified".
+description: damostack critique of a DCF, analyst or banker valuation, M&A case, or pitch deck against Damodaran's "dark side" checklist. Triggers: "review this DCF", "is this target reasonable", "critique this valuation".
 ---
 
 # /dam-review — grade the valuation like he grades his students'
@@ -10,8 +10,8 @@ the suspect ones *(2026/02/data-update-5-for-2026-risk-and-hurdle)*. This skill 
 
 ## 0. Load
 
-Read `~/.claude/skills/damostack/knowledge/voice.md` and
-`~/.claude/skills/damostack/knowledge/pitfalls.md`. Get the material: a file path (Read it; for a
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full), then run
+`~/.claude/skills/damostack/bin/kb pitfalls`. Get the material: a file path (Read it; for a
 spreadsheet, extract the key inputs), a URL (WebFetch it), or pasted text.
 
 ## 1. Reconstruct it

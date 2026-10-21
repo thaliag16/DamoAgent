@@ -92,3 +92,10 @@ Restart Claude Code. Valuations are saved to `~/.damostack/valuations/<company>/
 [MIT](LICENSE). The license covers this repo's code and its own text (the summaries, principles,
 frameworks, and skills). Aswath Damodaran's posts, books, and datasets are his; the tools read his
 public data live from pages.stern.nyu.edu/~adamodar and don't redistribute it.
+
+## Token cost
+
+Skills load `knowledge/core.md` (about 1,100 tokens: voice, honesty rules, the canon, dated market
+inputs) and then only the sections they need via `bin/kb <file> <section>` (e.g. `kb frameworks V2`).
+The post index is only grepped, and `addata.py`/`adsearch.py` print compact output by default. This
+cuts each skill's load by about half, and the `damodaran` agent's startup load from ~6,200 to ~1,100 tokens.

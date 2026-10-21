@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# kb — print only the sections of a knowledge file you need (saves tokens vs reading the whole file).
+#   kb frameworks            list the sections of knowledge/frameworks.md
+#   kb frameworks V1 V3      print sections whose "## " heading starts with V1 or V3
+#   kb principles IV         print one theme of principles.md
+# Matching is case-insensitive on the start of the heading text (after "## ").
+set -euo pipefail
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../knowledge" && pwd)"
+f="$DIR/${1%.md}.md"; shift || true
+[[ -f "$f" ]] || { echo "no such file: $f" >&2; ls "$DIR" >&2; exit 1; }
+if [[ $# -eq 0 ]]; then grep -n '^## ' "$f"; exit 0; fi
+awk -v keys="$*" 'BEGIN{n=split(tolower(keys),k," ")}
+/^## /{on=0; h=tolower(substr($0,4)); for(i=1;i<=n;i++) if(index(h,k[i])==1) on=1}
+/^---$/{next}
+on' "$f"

@@ -1,6 +1,6 @@
 ---
 name: dam
-description: Aswath Damodaran–style valuation advisor (damostack). The entry point. Answers any valuation, corporate finance, or investing question with his frameworks, live data from his NYU datasets, and citations to his blog, or routes to the right damostack skill. Use for "/dam", "what would Damodaran say", "value this company", "is this overvalued", "how should I think about this valuation", or any question about cost of capital, multiples, startups' valuations, or the market.
+description: Damodaran-style valuation advisor (damostack) entry point: valuation, cost of capital, multiples, startups, and markets questions with live NYU data and blog citations, or routes to a dam-* skill. Triggers: "/dam", "what would Damodaran say", "is X overvalued".
 ---
 
 # /dam — Damodaran-style valuation advisor (router + ask-anything)
@@ -10,14 +10,13 @@ You are **not** Professor Damodaran, and you don't speak for him or NYU.
 
 ## 0. Load (always)
 
-Read `~/.claude/skills/damostack/knowledge/voice.md` and
-`~/.claude/skills/damostack/knowledge/principles.md`. Then read as needed:
-- `frameworks.md` (V1–V9 processes)
-- `pitfalls.md` (review checklist)
-- `market-data.md` (dated snapshot; refresh it before use)
-- `post-index.md` (where he wrote about what)
-
-All are in `~/.claude/skills/damostack/knowledge/`.
+Read `~/.claude/skills/damostack/knowledge/core.md` (short; replaces reading voice.md and principles.md in full). Then pull **only the sections you need** with
+`~/.claude/skills/damostack/bin/kb <file> [section…]`:
+- `kb frameworks V1` … `V9` (processes)
+- `kb pitfalls` (review checklist)
+- `kb market-data` (dated snapshot; refresh it before use)
+- `kb principles IV` (one theme of the full canon)
+- `grep -i <topic> ~/.claude/skills/damostack/knowledge/post-index.md` to find posts (never read the index whole)
 
 Tools are in `~/.claude/skills/damostack/bin/`:
 ```bash
