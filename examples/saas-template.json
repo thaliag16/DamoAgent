@@ -1,0 +1,60 @@
+{
+  "name": "Example Co",
+  "currency": "USD",
+  "as_of": "2026-10-01",
+  "story": "One paragraph: what the business is, who it sells to, how big it can get, how profitable at scale, how much it must reinvest, and how risky it is.",
+  "base": {
+    "revenue": 1000.0,
+    "ebit": -50.0,
+    "invested_capital": 800.0,
+    "cash": 300.0,
+    "debt": 100.0,
+    "minority_interests": 0.0,
+    "non_operating_assets": 0.0,
+    "options_value": 0.0,
+    "shares": 100.0,
+    "price": 25.0,
+    "effective_tax": 0.05,
+    "marginal_tax": 0.25,
+    "nol": 400.0
+  },
+  "drivers": {
+    "growth_y1": 0.3,
+    "growth_y2_5": 0.25,
+    "margin_y1": null,
+    "target_margin": 0.2,
+    "years_to_converge": 6,
+    "sales_to_capital_1_5": 2.0,
+    "sales_to_capital_6_10": 2.0,
+    "riskfree": 0.0507,
+    "coc_initial": 0.1,
+    "coc_mature": 0.0865,
+    "terminal_growth": null,
+    "terminal_roic": null,
+    "failure_prob": 0.05,
+    "distress_proceeds_pct": 0.5,
+    "tam_year10": null
+  },
+  "mc": {
+    "growth_y2_5": [
+      0.15,
+      0.25,
+      0.35
+    ],
+    "target_margin": [
+      0.12,
+      0.2,
+      0.26
+    ],
+    "sales_to_capital_1_5": [
+      1.5,
+      2.0,
+      3.0
+    ],
+    "coc_initial": [
+      0.09,
+      0.1,
+      0.115
+    ]
+  }
+}
