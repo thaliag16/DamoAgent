@@ -86,3 +86,9 @@ Restart Claude Code. Valuations are saved to `~/.damostack/valuations/<company>/
 - When he publishes his annual January data updates or the July country risk update, update
   `knowledge/market-data.md`.
 - When a new post changes a framework, update `principles.md` and add it to `post-index.md`.
+
+## License
+
+[MIT](LICENSE). The license covers this repo's code and its own text (the summaries, principles,
+frameworks, and skills). Aswath Damodaran's posts, books, and datasets are his; the tools read his
+public data live from pages.stern.nyu.edu/~adamodar and don't redistribute it.
